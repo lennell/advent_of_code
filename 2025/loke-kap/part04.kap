@@ -1,0 +1,9 @@
+∇ solveDay4part1 {
+	+/,d×4≥ +/, ¯1 0 1 ⊖⌻ ¯1 0 1 ⌽¨ ⊂ d←(1+⍴)⍛↑ @@ = ⊃ io:read "part04.txt"
+}
+
+∇ solveDay4part2 {
+	n ← 0
+	({ a ← ⍵×4≥ ¯1 ¯1↓ +/, ¯1 0 1 ⊖⌻ ¯1 0 1 ⌽¨ ⊂(1+⍴)⍛↑⍵ ⋄ n+←+/,a ⋄ ⍵∧~a }⍣≡) @@ = ⊃ io:read "part04.txt"
+	n
+}

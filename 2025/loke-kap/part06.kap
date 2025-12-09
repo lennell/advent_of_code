@@ -1,0 +1,16 @@
+∇ solveDay6part1 {
+	rows ← io:read "part06.txt"
+	op ← @* = (@\s≠)⍛/ ↑¯1↑rows
+	d ← ⍉ ⊃ ⍎¨¨ (@\s≠)⍛⊂¨ ¯1↓rows
+	+/ op % (+/d) (×/d)
+}
+
+∇ solveDay6part2 {
+	rows ← io:read "part06.txt"
+
+	op ← @* = (@\s≠)⍛/ ↑¯1↑rows
+	r ← ¯1↓rows
+	x ← ∨⌿@\s≠ ⊃ r
+	d ←((⍎⍤1)⍉⊃)¨ ⊂[0] ⊃ {x⊂⍵}¨ r
+	+/ op % (+/¨d) (×/¨d)
+}

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+reduce = lambda do |(times, angle), move|
+  angle = (angle + move) % 100
+  times += 1 if angle.zero?
+  [times, angle]
+end
+pp(File.read(ARGV[0]).gsub('L', '-').scan(/-?\d+/).map(&:to_i)
+       .reduce([0, 50], &reduce).first)

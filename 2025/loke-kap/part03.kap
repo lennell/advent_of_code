@@ -1,0 +1,7 @@
+∇ solveDay3part1 {
+	+/ { v←⍵-@0 ⋄ n←↑⍒¯1↓v ⋄ (⌈/(1+n)↓v) + 10×v[n] }¨ io:read "part03.txt"
+}
+
+∇ solveDay3part2 {
+	+/ { ↑ { (p v)←⍺ ⋄ n←↑⍒⍵↓v ⋄ (v[n]+p×10) ⍮ (n+1)↓v }/ (⊂0 ⍮ ⍵-@0) , -⌽⍳12 }¨ io:read "part03.txt"
+}

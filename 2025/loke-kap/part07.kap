@@ -1,0 +1,8 @@
+∇ solveDay7part1 {
+	f ← @.≠ io:read "part07.txt"
+	+/ ∊ (1↓f) ∧ ¯1↓ { (⍺>⍵) ∨ ∨/ ¯1 1 ⌽¨ ⊂⍺∧⍵ }\ f
+}
+
+∇ solveDay7part2 {
+	+/ { (⍺×~⍵) + +/ ¯1 1 ⌽¨ ⊂⍺×⍵ }/ @.≠ io:read "part07.txt"
+}

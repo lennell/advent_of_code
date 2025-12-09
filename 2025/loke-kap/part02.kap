@@ -1,0 +1,11 @@
+∇ loadData {
+	,/ {…/⍎¨⍵}¨ (@-≠)⍛⊂¨ (@,≠)⍛⊂ ↑ io:read "part02.txt"
+}
+
+∇ solveDay2Part1 {
+	+/ { a←10⊤⍵ ⋄ ⍵ × ∧/=⌿ 2 ¯1 ⍴ a,(2|≢a)⍴100 }¨ loadData 0
+}
+
+∇ solveDay2Part2 {
+	+/ { a←10⊤⍵ ⋄ d←1,math:divisors ≢a ⋄ ⍵ × 1∊{ 1=≢∪ ¯1 ⍵ ⍴ a }¨ d }¨ (10≤)⍛/ loadData 0
+}
