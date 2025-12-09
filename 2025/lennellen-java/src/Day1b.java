@@ -8,7 +8,7 @@ import java.util.List;
 public class Day1b {
 
     public static void main(String[] args) throws IOException {
-        System.out.println("Day 1");
+        System.out.println("Day 1b");
         int i = 0;
         List<String> lines = Files.readAllLines(Path.of("src/input1.txt"));
         int pass = 50;
